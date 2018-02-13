@@ -6,43 +6,43 @@ package ru.sberbank.homework.kiseleva;
 public class SimpleCalculatorTest {
     SimpleCalculator simpleCalculator = new SimpleCalculator();
 
-    public void additionTest(int one, int two, int expected) {
-        int actual = simpleCalculator.addition(one, two);
+    public void sumTest(int one, int two, int expected) {
+        int actual = simpleCalculator.sum(one, two);
         Assert.equal("Addition int test passed", expected, actual);
     }
 
-    public void subtractionTest(int one, int two, int expected) {
-        int actual = simpleCalculator.subtraction(one, two);
+    public void subtractTest(int one, int two, int expected) {
+        int actual = simpleCalculator.subtract(one, two);
         Assert.equal("Subtraction int test passed", expected, actual);
     }
 
-    public void multiplicationTest(int one, int two, int expected) {
-        int actual = simpleCalculator.multiplication(one, two);
+    public void multiplyTest(int one, int two, int expected) {
+        int actual = simpleCalculator.multiply(one, two);
         Assert.equal("Multiplication int test passed", expected, actual);
     }
 
-    public void divisionTest(int one, int two, int expected) {
-        int actual = simpleCalculator.division(one, two);
+    public void divideTest(int one, int two, int expected) {
+        int actual = simpleCalculator.divide(one, two);
         Assert.equal("Division int test passed", expected, actual);
     }
 
-    public void additionTest(double one, double two, double expected) {
-        double actual = simpleCalculator.addition(one, two);
+    public void sumTest(double one, double two, double expected) {
+        double actual = simpleCalculator.sum(one, two);
         Assert.equal("Addition double test passed", expected, actual);
     }
 
-    public void subtractionTest(double one, double two, double expected) {
-        double actual = simpleCalculator.subtraction(one, two);
+    public void subtractTest(double one, double two, double expected) {
+        double actual = simpleCalculator.subtract(one, two);
         Assert.equal("Subtraction double test passed", expected, actual);
     }
 
-    public void multiplicationTest(double one, double two, double expected) {
-        double actual = simpleCalculator.multiplication(one, two);
+    public void multiplyTest(double one, double two, double expected) {
+        double actual = simpleCalculator.multiply(one, two);
         Assert.equal("Multiplication double test passed", expected, actual);
     }
 
-    public void divisionTest(double one, double two, double expected) {
-        double actual = simpleCalculator.division(one, two);
+    public void divideTest(double one, double two, double expected) {
+        double actual = simpleCalculator.divide(one, two);
         Assert.equal("Division double test passed", expected, actual);
     }
 }

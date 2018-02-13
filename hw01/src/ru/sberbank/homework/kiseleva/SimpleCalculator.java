@@ -5,35 +5,35 @@ package ru.sberbank.homework.kiseleva;
  */
 public class SimpleCalculator {
 
-    public int addition(int one, int two) {
+    public int sum(int one, int two) {
         return one + two;
     }
 
-    public int subtraction(int one, int two) {
+    public int subtract(int one, int two) {
         return one - two;
     }
 
-    public int multiplication(int one, int two) {
+    public int multiply(int one, int two) {
         return one * two;
     }
 
-    public int division(int one, int two) {
+    public int divide(int one, int two) {
         return one / two;
     }
 
-    public double addition(double one, double two) {
+    public double sum(double one, double two) {
         return one + two;
     }
 
-    public double subtraction(double one, double two) {
+    public double subtract(double one, double two) {
         return one - two;
     }
 
-    public double multiplication(double one, double two) {
+    public double multiply(double one, double two) {
         return one * two;
     }
 
-    public double division(double one, double two) {
+    public double divide(double one, double two) {
         return one / two;
     }
 
