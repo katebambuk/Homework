@@ -8,19 +8,28 @@ import ru.sberbank.homework.common.Calculator;
 public class SolutionLocator {
 
     public static void main(String[] args) {
-        SolutionChecker sc = new SolutionChecker();
 
         FastClasspathScanner scanner = new FastClasspathScanner();
         scanner.addClassLoader(SolutionLocator.class.getClassLoader());
         scanner.matchClassesImplementing(Calculator.class, subclass -> {
-            try {
-                log.debug("Checking class from package: {}", subclass.getPackage().getName());
-                sc.startTesting(subclass.newInstance());
-            } catch (InstantiationException | IllegalAccessException e) {
-                log.error("Calculator instance creation failed", e);
-            }
+
+            String name = subclass.getPackage().getName();
+            log.debug("Checking class from package: {}", name);
+            SolutionChecker sc = new SolutionChecker(name);
+            sc.startTesting(() -> get(subclass));
+            log.info(sc.getStatus());
+
         });
         scanner.scan();
+    }
+
+    private static Calculator get(Class<? extends Calculator> subclass) {
+        try {
+            return subclass.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            log.error("Calculator instance creation failed", e);
+            return null;
+        }
     }
 
 

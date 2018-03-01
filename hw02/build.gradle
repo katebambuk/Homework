@@ -9,6 +9,16 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    manifest {
+        attributes "Main-Class": "ru.sberbank.homework.checker.SolutionLocator"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 dependencies {
     compile "io.github.lukehutch:fast-classpath-scanner:+",
             "org.slf4j:slf4j-api:1.7.25",

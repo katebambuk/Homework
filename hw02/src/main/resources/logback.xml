@@ -11,7 +11,7 @@
         </encoder>
     </appender>
 
-    <logger name="ru.sberbank" level="info" additivity="false">
+    <logger name="ru.sberbank" level="trace" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 

@@ -141,3 +141,6 @@ fabric.properties
 *.iml
 out
 target
+*/gradle/
+*/gradlew.bat
+*/gradlew
