@@ -1,11 +1,12 @@
 package ru.sberbank.homework.common;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class City {
+public class City implements Serializable {
     private int id;
     private String cityName;
     private LocalDate foundDate;
