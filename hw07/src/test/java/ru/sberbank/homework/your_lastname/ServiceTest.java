@@ -9,6 +9,7 @@ import ru.sberbank.homework.your_lastname.serialization.InMemoryRouteService;
 
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ServiceTest {
@@ -55,7 +56,8 @@ public class ServiceTest {
     }
 
     private void compareCities(List<? extends City> cached, List<? extends City> unCached) {
-        for (int i = 0; i < cached.size(); i++) {
+        assertEquals(unCached.size(), cached.size());
+        for (int i = 0; i < unCached.size(); i++) {
             City city = unCached.get(i);
             City city1 = cached.get(i);
             boolean equals = city.compare(city1);
